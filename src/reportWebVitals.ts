@@ -1,3 +1,4 @@
+// 前端性能检测工具
 import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
