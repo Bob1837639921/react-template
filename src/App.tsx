@@ -6,7 +6,7 @@ import './style/logo.scss'
 import Login from './views/login/login'
 import Test from './views/test_index/test'
 import DynamicAntdTheme from 'dynamic-antd-theme';
-import 'antd/dist/antd.dark.less'
+import dark from 'antd/dist/antd.dark.less'
 import { useState } from 'react'
 
 // function addSkin(params: string) {
@@ -47,50 +47,16 @@ import { useState } from 'react'
 //   // head.appendChild(styleDom)
 // }
 function App() {
-  const [count, setCount] = useState(false)
-  const [lighter, setLighter] = useState('')
-  const [dark, setDark] = useState('')
-  const [state, setState] = useState(false)
-  const switchs = () => {
-    setCount(!count)
-    setState(true)
-    let head = document.getElementsByTagName('head')[0]
-    let getLink = head.getElementsByTagName('style')
-    if (count) {
-      
-      if (!lighter.length) {
-        // setState(false)
-        
-        // console.log('aaaaaaaaaaaa',less);
-        
-        setLighter(getLink[getLink.length - 1].innerHTML)
-      } else {
-        getLink[getLink.length - 1].innerHTML = lighter
-        console.log(111);
-        // setState(false)
-      }
-    } else {
-      if (!dark.length) {
-        // setState(false)
-        require('antd/dist/antd.dark.css.map')
-        setDark(getLink[getLink.length - 1].innerHTML)
-      } else {
-        getLink[getLink.length - 1].innerHTML = dark
-        console.log(222);
-        // setState(false)
-      }
-    }
-    console.log('getLink', getLink);
-    
-  }
+  console.log('1111',dark);
+  
   return (
     <div className="App">
       <Login />
       <Test />
       <ReactLog className='App-logo'/>
-      <Button type="primary" onClick={() => switchs() }>Button</Button>
+      <Button type="primary">Button</Button>
       <div className='theme-container'>
-        <span>Change antd theme:{count} </span>
+        <span>Change antd theme: </span>
         <DynamicAntdTheme />
       </div>
     </div>
