@@ -24,4 +24,3 @@ export default connect(
         count: state.login
     })
 )(test)
-

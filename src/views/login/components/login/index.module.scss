@@ -1,0 +1,26 @@
+.container {
+  background: rgba(141, 104, 104, 0.5);
+  width: 55rem;
+  height: 30rem;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  border-radius: 2%;
+  display: flex;
+  overflow: hidden;
+  .left {
+    background: blue;
+    width: 70%;
+    height: 100%;
+    transition-timing-function: ease-in-out;
+  }
+  .moveToRight {
+    transition: transform 2s;
+    transform: translateX(500px);
+  }
+  .right {
+    background: white;
+    width: 30%;
+    height: 100%;
+  }
+}
